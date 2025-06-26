@@ -1,0 +1,29 @@
+# Logs
+*.log
+
+# macOS system files
+.DS_Store
+
+# VSCode settings (optional: keep if you're working solo)
+.vscode/
+
+# Node.js (if you later add tooling like vite, astro, etc.)
+node_modules/
+dist/
+build/
+
+# Output folders (in case of static site generators or build tools)
+public/
+.out/
+.cache/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Local environment/preview tools
+.env
+.env.local
+.env.*

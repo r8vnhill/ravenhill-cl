@@ -1,0 +1,16 @@
+# Ensure consistent line endings
+* text=auto
+
+# Explicitly mark common text file types
+*.html  text
+*.css   text
+*.js    text
+*.json  text
+*.md    text
+*.txt   text
+
+# Treat LICENSE as text (important for diffs)
+LICENSE text
+
+# Unicode safety
+*.html text eol=lf
