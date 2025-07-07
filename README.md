@@ -38,6 +38,7 @@ ravenhill-cl/
 ## 🔗 Contact
 
 GitHub: [@r8vnhill](https://github.com/r8vnhill)
+GitLab: [@r8vnhill](https://gitlab.com/r8vnhill)
 
 ---
 
