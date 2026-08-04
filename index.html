@@ -1,151 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ignacio Slater Muñoz - Lecturer and researcher in metaheuristics, Kotlin and Scala developer."
-    />
-    <title>Ignacio Slater Muñoz</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📘</text></svg>"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
-    <style>
-      :root {
-        --primary: #4b0082; /* purple */
-      }
-      body {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-      h1 {
-        margin-bottom: 0.2em;
-      }
-      ul {
-        padding-left: 1.5em;
-      }
-    </style>
-    <meta name="author" content="Ignacio Slater Muñoz" />
-  </head>
-  <body>
-    <header role="banner">
-      <h1>Ignacio Slater Muñoz</h1>
-      <p><strong>External lecturer</strong> at Universidad de Chile</p>
-      <p>
-        Researcher in metaheuristic algorithms, specialized in
-        <strong>Kotlin</strong> and <strong>Scala</strong> development.
-      </p>
-    </header>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I hold a degree in Computer Engineering and a Master's in Science with
-          a mention in Computing. I currently teach the course
-          <em>Design and Programming Methodologies</em> at Universidad de Chile.
-          My work focuses on software development using Kotlin and Scala, with
-          additional experience in Java, Python, and C#.
-        </p>
-      </section>
+        <title>Ignacio Slater Muñoz — Lecturer and Researcher</title>
 
-      <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-          <li>
-            Bergel, Alexandre, and Ignacio Slater Muñoz.
-            <a
-              href="https://doi.org/10.1109/SBST52555.2021.00007"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Beacon: Automated Test Generation for Stack-Trace Reproduction
-              Using Genetic Algorithms</a
-            >. 2021 IEEE/ACM 14th International Workshop on Search-Based
-            Software Testing (SBST).
-          </li>
-          <li>
-            <a
-              href="https://repositorio.uchile.cl/handle/2250/205483"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Keen: Kotlin genetic algorithms framework</a
-            >. Master's and Engineering thesis, advised by Professor Nancy
-            Hitschfeld Kahler. (2025)
-          </li>
-        </ul>
-      </section>
+        <meta
+            name="description"
+            content="Personal website of Ignacio Slater Muñoz, external lecturer at Universidad de Chile and researcher in metaheuristic optimization, Kotlin, and Scala."
+        />
+        <meta name="author" content="Ignacio Slater Muñoz" />
+        <meta name="theme-color" content="#4b0082" />
 
-      <section id="projects">
-        <h2>Projects&nbsp;&nbsp;Courses</h2>
-        <ul>
-          <li>
-            <a
-              href="https://dibs.ravenhill.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Design and Implementation of Software Libraries (DIBS)</a
-            >
-            — work in progress.
-          </li>
-          <li>
-            <a
-              href="https://mateo.ravenhill.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Metaheuristics, Algorithms and Evolutionary Optimization
-              Techniques (MATEO)</a
-            >
-            — currently under planning.
-          </li>
-        </ul>
-      </section>
+        <meta
+            property="og:title"
+            content="Ignacio Slater Muñoz — Lecturer and Researcher"
+        />
+        <meta
+            property="og:description"
+            content="External lecturer at Universidad de Chile and researcher in metaheuristic optimization, Kotlin, and Scala."
+        />
+        <meta property="og:type" content="website" />
 
-      <section id="nonsense">
-        <h2>Nonsense</h2>
-        <ul>
-          <li>
-            <a
-              href="https://gitlab.com/r8vnhill/dc-reading-order"
-              target="_blank"
-              rel="noopener noreferrer"
-              >DC Comics Reading Order</a
-            >
-          </li>
-        </ul>
-      </section>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📘</text></svg>"
+        />
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          You can find me on
-          <a
-            href="https://github.com/r8vnhill"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub (@r8vnhill)
-          </a>
-          or
-          <a
-            href="https://gitlab.com/r8vnhill"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitLab (@r8vnhill) </a
-          >.
-        </p>
-      </section>
-    </main>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+        />
 
-    <footer role="contentinfo">
-      <small>&copy; 2025 Ignacio Slater Muñoz.</small>
-    </footer>
-  </body>
+        <style>
+        :root {
+          --primary: #4b0082;
+          --primary-hover: #35005c;
+          --primary-focus: rgb(75 0 130 / 20%);
+          --page-width: 52rem;
+          --section-spacing: 3.5rem;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        body > .page {
+          width: min(calc(100% - 2rem), var(--page-width));
+          margin-inline: auto;
+        }
+
+        .skip-link {
+          position: absolute;
+          top: -4rem;
+          left: 1rem;
+          z-index: 100;
+          padding: 0.75rem 1rem;
+          color: white;
+          background: var(--primary);
+          border-radius: 0.25rem;
+        }
+
+        .skip-link:focus {
+          top: 1rem;
+        }
+
+        nav {
+          padding-block: 1rem;
+          border-bottom: 1px solid var(--muted-border-color);
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          gap: 0.25rem 1rem;
+        }
+
+        nav a {
+          text-decoration: none;
+        }
+
+        nav a:hover {
+          text-decoration: underline;
+          text-underline-offset: 0.2em;
+        }
+
+        .hero {
+          padding-block: clamp(3rem, 8vw, 6rem);
+        }
+
+        .hero h1 {
+          max-width: 15ch;
+          margin-bottom: 0.25rem;
+          font-size: clamp(2.5rem, 8vw, 4.5rem);
+          line-height: 1;
+          letter-spacing: -0.04em;
+        }
+
+        .eyebrow {
+          margin-bottom: 0.75rem;
+          color: var(--primary);
+          font-weight: 700;
+        }
+
+        .summary {
+          max-width: 60ch;
+          margin-bottom: 0;
+          font-size: 1.15rem;
+        }
+
+        main section {
+          padding-block: var(--section-spacing);
+          border-top: 1px solid var(--muted-border-color);
+          scroll-margin-top: 2rem;
+        }
+
+        main section:first-child {
+          border-top: 0;
+        }
+
+        section h2 {
+          margin-bottom: 1.25rem;
+        }
+
+        section p {
+          max-width: 70ch;
+        }
+
+        .item-list {
+          display: grid;
+          gap: 1.25rem;
+          padding: 0;
+          list-style: none;
+        }
+
+        .item-list li {
+          padding-left: 1rem;
+          border-left: 0.25rem solid var(--primary);
+        }
+
+        .item-list p {
+          margin-block: 0.35rem 0;
+        }
+
+        .item-title {
+          font-weight: 700;
+        }
+
+        .item-metadata {
+          color: var(--muted-color);
+        }
+
+        .contact-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+
+        .contact-links a[role="button"] {
+          margin-bottom: 0;
+        }
+
+        footer {
+          padding-block: 2rem;
+          border-top: 1px solid var(--muted-border-color);
+          color: var(--muted-color);
+        }
+
+        @media (max-width: 36rem) {
+          :root {
+            --section-spacing: 2.5rem;
+          }
+
+          nav ul:first-child {
+            margin-bottom: 0;
+          }
+
+          .contact-links {
+            align-items: stretch;
+            flex-direction: column;
+          }
+        }
+        </style>
+    </head>
+
+    <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <div class="page">
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><strong>Ignacio Slater Muñoz</strong></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#side-projects">Side projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <header class="hero">
+                <p class="eyebrow">Lecturer · Researcher · Software Developer</p>
+
+                <h1>Ignacio Slater Muñoz</h1>
+
+                <p class="summary">
+                    External lecturer at Universidad de Chile and researcher in metaheuristic optimization, with a focus
+                    on software development using
+                    <strong>Kotlin</strong> and <strong>Scala</strong>.
+                </p>
+            </header>
+
+            <main id="main-content">
+                <section id="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading">About</h2>
+
+                    <p>
+                        I hold a degree in Computer Engineering and a Master of Science in Computer Science. I currently
+                        teach
+                        <em>Design and Programming Methodologies</em> at Universidad de Chile.
+                    </p>
+
+                    <p>
+                        My work focuses on metaheuristic optimization and software engineering, primarily using Kotlin
+                        and Scala. I also have experience with Java, Python, and C#.
+                    </p>
+                </section>
+
+                <section id="publications" aria-labelledby="publications-heading">
+                    <h2 id="publications-heading">Publications and theses</h2>
+
+                    <ol class="item-list">
+                        <li>
+                            <a
+                                class="item-title"
+                                href="https://doi.org/10.1109/SBST52555.2021.00007"
+                            >
+                                Beacon: Automated Test Generation for Stack-Trace Reproduction Using Genetic Algorithms
+                            </a>
+
+                            <p>Alexandre Bergel and Ignacio Slater Muñoz.</p>
+
+                            <p class="item-metadata">
+                                2021 IEEE/ACM 14th International Workshop on Search-Based Software Testing (SBST), 2021.
+                            </p>
+                        </li>
+
+                        <li>
+                            <a
+                                class="item-title"
+                                href="https://repositorio.uchile.cl/handle/2250/205483"
+                            >
+                                Keen: Kotlin Genetic Algorithms Framework
+                            </a>
+
+                            <p>
+                                Master's and Engineering thesis, advised by Professor Nancy Hitschfeld Kahler.
+                            </p>
+
+                            <p class="item-metadata">Universidad de Chile, 2025.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section id="courses" aria-labelledby="courses-heading">
+                    <h2 id="courses-heading">Courses</h2>
+
+                    <ul class="item-list">
+                        <li>
+                            <a class="item-title" href="https://atom.ravenhill.cl">
+                                Metaheuristic Optimization Algorithms and Techniques (ATOM)
+                            </a>
+
+                            <p>
+                                Course materials on modeling, implementing, and experimentally evaluating metaheuristic
+                                optimization algorithms.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="nonsense" aria-labelledby="nonsense-heading">
+                    <h2 id="nonsense-heading">Nonsense</h2>
+
+                    <ul class="item-list">
+                        <li>
+                            <a
+                                class="item-title"
+                                href="https://gitlab.com/r8vnhill/dc-reading-order"
+                            >
+                                DC Comics Reading Order
+                            </a>
+
+                            <p>
+                                A structured reading order for navigating DC Comics publications.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading">Contact</h2>
+
+                    <p>
+                        You can find my open-source work and current projects on GitHub and GitLab.
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="https://github.com/r8vnhill" role="button">
+                            GitHub · @r8vnhill
+                        </a>
+
+                        <a
+                            href="https://gitlab.com/r8vnhill"
+                            role="button"
+                            class="secondary"
+                        >
+                            GitLab · @r8vnhill
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <small> &copy; 2026 Ignacio Slater Muñoz. </small>
+            </footer>
+        </div>
+    </body>
 </html>
