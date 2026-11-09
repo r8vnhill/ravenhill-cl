@@ -1,47 +1,60 @@
 # ravenhill.cl
 
-A personal website for Ignacio Slater Muñoz — external lecturer at Universidad de Chile, researcher in metaheuristic algorithms, and Kotlin/Scala developer.
-
-> This is a minimalist static site intended as a personal profile and index to other academic and teaching projects.
+Personal website of Ignacio Slater Muñoz: external lecturer at Universidad de Chile, researcher in
+metaheuristic optimization, and Kotlin/Scala developer. It is a minimalist static profile that
+links to academic and teaching projects.
 
 ## 📄 Overview
 
-This site is built with plain HTML and styled using [Pico.css](https://picocss.com).  
-It includes:
+A single hand-written HTML page styled with [Pico.css](https://picocss.com), with no build step.
+[`index.html`](index.html) is the only source of truth for site content (biography, publications,
+courses, contact links); this README does not repeat it.
 
-- A brief biography
-- A list of selected publications
-- Links to current and upcoming courses
-- Contact information
+The [modernization roadmap](https://gitlab.com/r8vnhill/ravenhill-cl/-/work_items) (epics E0–E5) is
+tracked on GitLab.
 
 ## 🛠️ Structure
 
-```
+```text
 ravenhill-cl/
-├── index.html          # Main page
-├── LICENSE             # BSD-2-Clause License
+├── index.html          # Site content (served)
+├── robots.txt          # Crawler rules (served)
+├── wrangler.toml       # Cloudflare Worker static-asset configuration
+├── .assetsignore       # Files excluded from the Cloudflare upload
+├── docs/
+│   └── deployment.md   # Deploy source, asset contract, credentials, rollback
+├── tests/
+│   ├── Deployment.Contract.psd1  # Declared deployment contract (single source of truth)
+│   ├── Deployment.Helpers.psm1   # Test helpers (probing, file classification, hashing)
+│   └── Deployment.Tests.ps1      # Pester suites: local contract and live site
+├── dprint.json         # Formatter configuration
+├── cspell.json         # Spell-checker project dictionary
+├── CONTRIBUTING.md     # Contribution policy
+├── LICENSE             # BSD 2-Clause License
 ├── .gitignore          # Git ignore rules
-├── .gitattributes      # Git attributes for normalization
-└── .vscode/            # Optional editor settings
+├── .gitattributes      # Line-ending normalization
+└── .vscode/            # Optional editor settings (gitignored)
 ```
 
-## 📚 Publications
+## 🚀 Deployment
 
-- [Beacon: Automated Test Generation for Stack-Trace Reproduction Using Genetic Algorithms (2021)](https://doi.org/10.1109/SBST52555.2021.00007)
-- [Keen: Kotlin genetic algorithms framework (2025)](https://repositorio.uchile.cl/handle/2250/205483)
+**Every push to `main` on GitHub (`origin`) is a production release**, built by Cloudflare Workers
+Builds. Only the files in `PublicAssets` (`index.html`, `robots.txt`) are meant to be served; every
+other file must be listed in [`.assetsignore`](.assetsignore). Read
+[docs/deployment.md](docs/deployment.md) before changing deployment, adding root files, or pushing.
 
-## 📘 Courses
+Checks require PowerShell 7 and Pester 5.5 or later:
 
-- [DIBS – Design and Implementation of Software Libraries](https://dibs.ravenhill.cl) (in progress)
-- [MATEO – Metaheuristics, Algorithms and Evolutionary Optimization Techniques](https://mateo.ravenhill.cl) (planning stage)
+```powershell
+Invoke-Pester ./tests -ExcludeTagFilter Production  # offline contract; run before committing
+git fetch origin; Invoke-Pester ./tests -TagFilter Production  # live site; after each deploy
+```
 
 ## 🔗 Contact
 
-GitHub: [@r8vnhill](https://github.com/r8vnhill)
-GitLab: [@r8vnhill](https://gitlab.com/r8vnhill)
-
----
+- GitHub: [@r8vnhill](https://github.com/r8vnhill)
+- GitLab: [@r8vnhill](https://gitlab.com/r8vnhill)
 
 ## 📄 License
 
-This project is licensed under the [BSD 2-Clause License](./LICENSE).
+Licensed under the [BSD 2-Clause License](LICENSE).

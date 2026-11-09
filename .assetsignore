@@ -1,3 +1,35 @@
+# Files excluded from the Cloudflare static-asset upload (gitignore syntax).
+#
+# wrangler.toml serves the repository root ([assets] directory = "."), so any file in the build
+# checkout that is not listed here becomes public. The served set is declared once, as PublicAssets
+# in tests/Deployment.Contract.psd1; the local Pester suite fails when a file is neither public nor
+# excluded. Rules:
+#
+# - New non-site file or directory: add it here.
+# - New site file: add it to PublicAssets instead.
+# - Keep entries explicit; do not use "!" negations (the suite rejects them).
+#
+# E2.1 replaces this with a dist/-only upload. Background: docs/deployment.md.
+
+# Git metadata left by the Workers Builds checkout
+.git
+
+# Repository tooling and configuration
+.assetsignore
+.gitattributes
+.gitignore
 .vscode
+cspell.json
+dprint.json
+wrangler.toml
+
+# Repository documentation and tests
+CONTRIBUTING.md
+LICENSE
+README.md
+docs
+tests
+
+# Local artifacts
 *.log
 *.swp
