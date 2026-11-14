@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ignacio Slater Muñoz" />
+    <meta name="description" content="An essay on frontier AI, scientific responsibility, and why independently executable heuristic approaches remain worth studying." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="In Defense of Heuristics in the Age of LLMs" />
+    <meta property="og:description" content="An essay on frontier AI, scientific responsibility, and why independently executable heuristic approaches remain worth studying." />
+    <title>In Defense of Heuristics in the Age of LLMs | Ignacio Slater Muñoz</title>
+    <link rel="canonical" href="https://ravenhill.cl/blogs/in-defense-of-heuristics-in-the-age-of-llms.html" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <style>
+      :root { --primary: #4b0082; }
+      body { max-width: 800px; margin: 0 auto; padding: 2rem; }
+      .skip-link { position: absolute; left: -10000px; }
+      .skip-link:focus { position: static; }
+      article > header { margin-bottom: 2rem; }
+      .essay-subtitle { font-size: 1.1rem; }
+      article h2 { margin-top: 2.5rem; scroll-margin-top: 1rem; }
+      article p { line-height: 1.7; }
+      article .reference { padding-left: 1.5rem; text-indent: -1.5rem; overflow-wrap: anywhere; }
+      article h2 code { font-size: inherit; }
+      footer { margin-top: 3rem; }
+      @media (max-width: 600px) { body { padding: 1rem; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to article</a>
+    <nav aria-label="Site navigation"><a href="/">← Home</a></nav>
+    <main id="content">
+      <article>
+        <header>
+          <h1>In Defense of Heuristics in the Age of LLMs</h1>
+          <p class="essay-subtitle"><em>What if one of the most valuable things we could do with artificial intelligence is use it to discover solutions that no longer depend on it?</em></p>
+          <p><small>By Ignacio Slater Muñoz · <time datetime="2026-11-14">November 14, 2026</time></small></p>
+        </header>
+        <p>Artificial intelligence has made remarkable progress in recent years. Problems that once required specialized algorithms, extensive domain knowledge, or considerable engineering effort can now be approached with a prompt and a sufficiently capable language model. In software engineering, scientific computing, mathematics, and many other disciplines, AI is changing not only what we can accomplish, but also how we think about solving problems.</p>
+        <p>I find these developments genuinely exciting. AI is an extraordinarily powerful tool, and I believe it has enormous potential to help us address some of society's most important challenges.</p>
+        <p>But that potential comes with responsibilities.</p>
+        <p>The development of frontier AI requires substantial computational resources, specialized hardware, energy, and infrastructure. Training increasingly capable models is not environmentally inconsequential, and neither is the industrial ecosystem that makes their development possible.</p>
+        <p>As researchers, I believe we have a responsibility to acknowledge these consequences when deciding which technologies to investigate, advance, and promote.</p>
+        <p>That responsibility does not mean rejecting AI. On the contrary, I believe <strong>we should use AI to help address the challenges created by its own development</strong>.</p>
+        <p>One possibility I find particularly promising is to use AI to help us discover better ways of solving problems <em>without depending on AI</em>.</p>
+        <p>This is neither a straightforward solution nor an uncontroversial proposition. It raises difficult questions about the role AI should play in scientific research, the environmental consequences of its development, and whether investing in alternatives to increasingly capable models is a worthwhile direction.</p>
+        <p>Nevertheless, I believe it is an idea worth exploring.</p>
+        <h2 id="should-better-results-become-the-end-of-the-discussion">Should better results become the end of the discussion?</h2>
+        <p>Consider what happens when a new AI-based approach significantly outperforms an established algorithm.</p>
+        <p>Researchers compare benchmarks, report improvements, investigate new architectures, and explore how much further the AI-based approach can be pushed.</p>
+        <p>Meanwhile, the older approach risks becoming little more than a baseline: something against which new models demonstrate their superiority.</p>
+        <p>This is understandable. When an approach consistently produces better results, there are good reasons to adopt it.</p>
+        <p>But <strong>demonstrating that one technique outperforms another does not establish that the weaker technique has exhausted its scientific potential</strong>.</p>
+        <p>A heuristic might perform worse because its representation is inadequate, its search operators are ineffective, or its objective function provides insufficient information. Perhaps it has not received the same research attention as its newer competitors.</p>
+        <p>Or perhaps it has genuine limitations that cannot be overcome without fundamentally changing the approach.</p>
+        <p>All of these possibilities are worth understanding.</p>
+        <p>If a language model can solve a problem that a heuristic cannot, we should aim to answer <em>why</em>. What information is the model exploiting? What characteristics of the problem make its approach effective? Could some of those capabilities be expressed through a more explicit, reusable algorithm?</p>
+        <p>And if they cannot, that is an interesting scientific result too.</p>
+        <p>Throughout this essay, I am primarily concerned with the distinction between approaches that depend on large pretrained models and those that can operate independently of them. Heuristic search is itself part of the history of artificial intelligence. My argument is not about rejecting AI in favor of something fundamentally different, but about preserving and expanding the diversity of computational approaches available to us.</p>
+        <h2 id="doomsday-cult-science">Doomsday cult science</h2>
+        <p>My motivation for asking these questions is not exclusively technical.</p>
+        <p>The environmental consequences of developing large AI systems deserve serious consideration. Research on the 176-billion-parameter BLOOM model, for example, demonstrates how accounting for hardware manufacturing and other lifecycle processes changes estimates of a model's carbon footprint (Luccioni et al., 2023).</p>
+        <p>At a broader scale, the International Energy Agency (2025) estimated that data centers consumed approximately 415 TWh of electricity in 2024 and projected that demand could reach around 945 TWh by 2030. These figures concern data centers generally, not AI training alone, but AI is an important contributor to the projected growth.</p>
+        <p>These are not arguments against using AI.</p>
+        <p>I do not believe that responsibility for the environmental consequences of frontier-model development should be placed primarily on individual users. Someone using an AI assistant to study, work, or solve a problem should not be expected to carry the burden of decisions made by the organizations developing and operating these systems.</p>
+        <p>My concern is with the broader direction of technological development, and particularly with the responsibilities of those of us who participate in shaping it.</p>
+        <p>We choose which questions to investigate, which techniques to improve, which results to celebrate, and which approaches deserve continued investment.</p>
+        <p>And yet, there is something deeply troubling about acknowledging the environmental consequences of our technologies while continuing to pursue their development as though those consequences were inevitable, or entirely outside our responsibility.</p>
+        <p>We cannot simply document the problem, recognize its seriousness, and then proceed as if nothing about our research priorities needs reconsideration.</p>
+        <p>The GREENER principles for environmentally sustainable computational science provide an example of how researchers can approach these responsibilities through greater awareness, transparency, and changes in research practices (Lannelongue et al., 2023).</p>
+        <p>If every sufficiently difficult computational problem increasingly becomes a reason to develop or depend on a larger model, we should at least ask whether that is the only path worth pursuing.</p>
+        <h2 id="aiassisted-not-aidependent">AI-assisted, not AI-dependent</h2>
+        <p>There is another possible direction for AI research, one that I find particularly promising.</p>
+        <p>Instead of using AI exclusively as the final mechanism for solving a problem, we can also use it as an instrument for discovering new algorithms.</p>
+        <p>Imagine an AI system that examines a difficult computational problem, identifies useful patterns, proposes candidate solutions, and helps researchers understand why existing methods struggle.</p>
+        <p>The outcome need not be another AI-powered application.</p>
+        <p>It could be a better heuristic, a more expressive representation, or a new optimization strategy. An algorithm that can be implemented, inspected, and executed independently of the model that helped discover it.</p>
+        <p>This is not merely hypothetical.</p>
+        <p>In <em>FunSearch</em>, Romera-Paredes et al. (2024) combined a pretrained language model with evolutionary search and an automated evaluator to discover mathematical constructions and improved heuristics for online bin packing.</p>
+        <p>What interests me most about this work is not simply that an LLM contributed to solving difficult problems. It is that the process produced executable programs whose subsequent operation does not require consulting the originating model.</p>
+        <p><strong>AI-assisted discovery is not the same thing as AI-dependent execution.</strong></p>
+        <p>Of course, discovering an algorithm using a pretrained model does not erase the environmental impact of training that model. Nor does it automatically establish that the discovery process is environmentally preferable to conventional research.</p>
+        <p>But there is a difference between using the capabilities of existing AI systems to advance scientific knowledge and treating the development of increasingly capable models as the necessary path forward for every difficult problem.</p>
+        <p>The former may produce algorithms and knowledge that remain useful independently of future models. The latter risks making continued progress dependent on a technological ecosystem whose environmental consequences we are still learning to understand.</p>
+        <p>I am not suggesting that one path is always preferable. But I believe we should investigate both.</p>
+        <h2 id="going-back-to-my-roots-automated-crash-reproduction">Going back to my roots: automated crash reproduction</h2>
+        <p>One problem that has led me to think about these questions is <em>automated crash reproduction</em> (ACR).</p>
+        <p>When software fails, developers often have access to an exception, a stack trace, or other information about the failure. ACR attempts to automatically construct a test that reproduces the observed behavior, helping developers investigate and understand its cause.</p>
+        <p>My interest in this problem is not entirely theoretical.</p>
+        <p>In earlier work on Beacon, we successfully reproduced simple Python crashes using genetic algorithms (Slater Muñoz &amp; Bergel, 2021). Later, exploring related ideas in Kotlin through Keen produced less encouraging and less consistent results (Slater Muñoz, 2025).</p>
+        <p>I do not believe this establishes anything about dynamically versus statically typed languages. The implementations, representations, fitness functions, and experimental conditions differed in important ways.</p>
+        <p>But that is exactly what makes the experience interesting to me. We observed different outcomes without understanding which characteristics were responsible for those differences.</p>
+        <p>And I am not particularly satisfied with leaving that question unanswered simply because newer AI-based approaches can achieve better results.</p>
+        <p>Other researchers have continued advancing search-based ACR. Oliver et al. (2025), for example, improved JavaScript crash-reproduction rates by investigating alternative fitness functions and multi-objective optimization.</p>
+        <p>More recently, Liu and Wu (2026) evaluated LLM agents on targeted Java exception reproduction. Their strongest configuration achieved an 89.5% success rate across 210 real-world bugs, outperforming the conventional test-generation tools evaluated in their study.</p>
+        <p>These studies use different benchmarks and reproduction criteria, so their percentages should not be compared directly. Nevertheless, modern LLM agents have demonstrated impressive capabilities on problems closely related to ACR.</p>
+        <p>Should we interpret that achievement as a reason to stop investigating conventional search-based approaches?</p>
+        <p>I would argue the opposite.</p>
+        <p><strong>These results make the unanswered questions more interesting, not less.</strong></p>
+        <p>Why do LLM agents succeed where evolutionary search struggles? Is the difficulty caused by the algorithm itself, the representation of candidate programs, or insufficient search guidance?</p>
+        <p>Could we examine successful LLM-generated reproductions and identify reusable principles that improve heuristic generation?</p>
+        <p>And, perhaps most importantly, <strong>how far could we push a purely heuristic approach if we used the knowledge gained from AI-based methods to improve it?</strong></p>
+        <p>I do not know the answer.</p>
+        <p>Maybe we could substantially narrow the performance gap. Maybe certain classes of crashes are particularly suitable for lightweight, locally executable search. Perhaps hybrid methods would consistently outperform either approach independently.</p>
+        <p>Or perhaps we would discover important limitations that explain why some problems remain exceptionally difficult for conventional methods.</p>
+        <p>Every one of those outcomes would improve our understanding of the problem.</p>
+        <p>That is reason enough to investigate them.</p>
+        <h2 id="from-science-import"><code>from science import *</code></h2>
+        <p>There is another reason why I believe this research matters.</p>
+        <p>I believe science must distance itself from the traditional, and frankly archaic, image of academia as an <em>ivory tower</em>: a place where researchers pursue knowledge while remaining detached from the realities, needs, and consequences of the world around them.</p>
+        <p>Scientific inquiry must remain intellectually independent. Fundamental research, curiosity, and the pursuit of knowledge for its own sake are essential to scientific progress.</p>
+        <p>But <strong>intellectual independence should not be confused with social detachment</strong>.</p>
+        <p>Science is not conducted outside society. It is shaped by societal priorities, supported by institutions and communities, and dependent on material resources. The technologies we develop have consequences that extend far beyond our laboratories and publications.</p>
+        <p>As researchers, we cannot reasonably claim that those consequences are entirely separate from our responsibilities.</p>
+        <p>And that responsibility extends beyond environmental impact.</p>
+        <p>Not everyone has access to the same computational resources.</p>
+        <p>A researcher working at a well-funded institution may have access to powerful computing infrastructure, commercial models, and substantial API budgets. A student or an independent researcher may have only a personal computer.</p>
+        <p>The methods we develop influence who can participate in research.</p>
+        <p>If meaningful scientific progress increasingly requires access to expensive infrastructure or proprietary computational services, we risk making participation dependent on resources that are unevenly distributed.</p>
+        <p>An approach that can be implemented locally, inspected, modified, and evaluated using modest resources has value beyond its performance on a benchmark.</p>
+        <p>That does not mean every heuristic is inexpensive or that every AI-based approach requires enormous resources. But accessibility, reproducibility, and technological independence are important characteristics of the methods we develop.</p>
+        <p>Furthermore, understanding alternative algorithms contributes something that cannot always be captured by a performance metric: knowledge about the structure of the problem itself.</p>
+        <p>A successful model may tell us that a problem can be solved. A carefully designed algorithm may also help us understand which information is necessary, which assumptions matter, and which mechanisms make the solution possible.</p>
+        <p>These are complementary forms of scientific progress.</p>
+        <p>If we genuinely want science to remain connected to the society it serves, we should care not only about what our research makes possible, but also about <strong>who can benefit from it, who can participate in it, and what consequences follow from the technologies we choose to advance</strong>.</p>
+        <h2 id="problem-ai-problem">Problem != AI problem</h2>
+        <p>I am not proposing that we abandon frontier AI research, avoid using language models, or insist that traditional algorithms must remain competitive at all costs.</p>
+        <p>Some problems may genuinely benefit from large pretrained models. Others may be best approached through hybrid techniques. And there will undoubtedly be cases where developing a specialized heuristic is neither practical nor worthwhile.</p>
+        <p>The history of expert systems offers an interesting example.</p>
+        <p>Once among the most promising approaches to artificial intelligence, classical expert systems attempted to capture human expertise through explicitly encoded knowledge and inference rules. Although some achieved considerable success, the difficulty of acquiring, maintaining, and scaling their knowledge bases significantly limited their broader applicability (Johannsen &amp; Alty, 1991).</p>
+        <p>Their underlying principles remain useful in specialized rule-based systems, but many of their original ambitions proved difficult to sustain.</p>
+        <p>I certainly would not argue that we should revive every abandoned technique simply because it represents an alternative to contemporary AI. <strong>Understanding when an approach has reached its practical or theoretical limits is itself a valuable scientific achievement.</strong></p>
+        <p>What concerns me is prematurely declaring those limits simply because another technology currently performs better.</p>
+        <p>There is a difference between moving away from an approach because sustained investigation has revealed important limitations and dismissing it simply because a newer technology has emerged.</p>
+        <p>The point is not that heuristics are inherently better. It is that <strong>their scientific value should not be determined exclusively by whether they outperform the latest AI system</strong>.</p>
+        <p>We should continue exploring alternatives because they can teach us something about the problems we study, offer different trade-offs, and expand the computational approaches available to society.</p>
+        <p>And I believe frontier AI has an important role to play in that exploration.</p>
+        <h2 id="the-road-ahead">The road ahead</h2>
+        <p>Scientific progress should expand what we can understand and accomplish.</p>
+        <p>The emergence of powerful AI systems has unquestionably expanded those possibilities. But I worry that we may sometimes confuse the growing capabilities of a particular technology with the broader advancement of computational knowledge.</p>
+        <p>When a model solves a difficult problem, we have achieved something important.</p>
+        <p>When we understand <em>why</em> the problem was difficult, discover a reusable algorithmic principle, or develop a method that others can independently reproduce and improve, we have achieved something important too.</p>
+        <p>And when AI itself helps us make those discoveries, its contribution becomes greater than the immediate task it was used to solve.</p>
+        <p>The environmental consequences of frontier AI development make this possibility especially worth considering. We should ask not only how to build more capable systems, but also how to ensure that the resources invested in developing them produce lasting scientific and societal benefits.</p>
+        <p>I do not know how far traditional heuristics can take us, or how many problems currently solved by large language models could eventually be addressed by simpler algorithms. Perhaps the answer is fewer than I hope.</p>
+        <p>But I believe those questions are worth asking, and I find the possibility of using AI to help answer them genuinely exciting.</p>
+        <p>We do not need to choose between appreciating what AI can accomplish and recognizing the value of its alternatives.</p>
+        <p>We can do both.</p>
+        <p>We <strong>should</strong> do both.</p>
+        <hr />
+        <h2 id="references">References</h2>
+        <p class="reference">International Energy Agency. (2025). <em>Energy and AI</em>. <a href="https://www.iea.org/reports/energy-and-ai" rel="noopener noreferrer">https://www.iea.org/reports/energy-and-ai</a></p>
+        <p class="reference">Johannsen, G., &amp; Alty, J. L. (1991). Knowledge engineering for industrial expert systems. <em>Automatica, 27</em>(1), 97–114. <a href="https://doi.org/10.1016/0005-1098(91)90009-Q" rel="noopener noreferrer">https://doi.org/10.1016/0005-1098(91)90009-Q</a></p>
+        <p class="reference">Lannelongue, L., Aronson, H.-E. G., Bateman, A., Birney, E., Caplan, T., Juckes, M., McEntyre, J., Morris, A. D., Reilly, G., &amp; Inouye, M. (2023). GREENER principles for environmentally sustainable computational science. <em>Nature Computational Science, 3</em>, 514–521. <a href="https://doi.org/10.1038/s43588-023-00461-y" rel="noopener noreferrer">https://doi.org/10.1038/s43588-023-00461-y</a></p>
+        <p class="reference">Liu, J., &amp; Wu, Y. (2026). Beyond heuristics? Rethinking targeted unit test generation in the era of LLM agents. In <em>20th International Symposium on Empirical Software Engineering and Measurement (ESEM 2026)</em> (Article 47, pp. 1–21). Schloss Dagstuhl – Leibniz-Zentrum für Informatik. <a href="https://doi.org/10.4230/LIPIcs.ESEM.2026.47" rel="noopener noreferrer">https://doi.org/10.4230/LIPIcs.ESEM.2026.47</a></p>
+        <p class="reference">Luccioni, A. S., Viguier, S., &amp; Ligozat, A.-L. (2023). Estimating the carbon footprint of BLOOM, a 176B parameter language model. <em>Journal of Machine Learning Research, 24</em>(253), 1–15. <a href="https://www.jmlr.org/papers/v24/23-0069.html" rel="noopener noreferrer">https://www.jmlr.org/papers/v24/23-0069.html</a></p>
+        <p class="reference">Oliver, P., Dietrich, J., Anslow, C., &amp; Homer, M. (2025). Syntest-ACR: Automated crash reproduction for JavaScript. In <em>2025 IEEE International Conference on Software Maintenance and Evolution (ICSME)</em> (pp. 443–454). IEEE. <a href="https://doi.org/10.1109/ICSME64153.2025.00047" rel="noopener noreferrer">https://doi.org/10.1109/ICSME64153.2025.00047</a></p>
+        <p class="reference">Romera-Paredes, B., Barekatain, M., Novikov, A., Balog, M., Kumar, M. P., Dupont, E., Ruiz, F. J. R., Ellenberg, J. S., Wang, P., Fawzi, O., Kohli, P., &amp; Fawzi, A. (2024). Mathematical discoveries from program search with large language models. <em>Nature, 625</em>, 468–475. <a href="https://doi.org/10.1038/s41586-023-06924-6" rel="noopener noreferrer">https://doi.org/10.1038/s41586-023-06924-6</a></p>
+        <p class="reference">Slater Muñoz, I. A. (2025). <em>Keen: Kotlin genetic algorithms framework</em> [Master's thesis, Universidad de Chile]. Repositorio Académico de la Universidad de Chile. <a href="https://doi.org/10.58011/ww8n-qt35" rel="noopener noreferrer">https://doi.org/10.58011/ww8n-qt35</a></p>
+        <p class="reference">Slater Muñoz, I., &amp; Bergel, A. (2021). Beacon: Automated test generation for stack-trace reproduction using genetic algorithms. In <em>2021 IEEE/ACM 14th International Workshop on Search-Based Software Testing (SBST)</em> (pp. 1–7). IEEE. <a href="https://bergel.eu/MyPapers/Slat21a-GA.pdf" rel="noopener noreferrer">https://bergel.eu/MyPapers/Slat21a-GA.pdf</a></p>
+      </article>
+    </main>
+    <footer><small>© 2026 Ignacio Slater Muñoz · <a href="/">Home</a></small></footer>
+  </body>
+</html>

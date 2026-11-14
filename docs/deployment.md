@@ -30,7 +30,7 @@ tests disagree, the tests are authoritative; fix this document in the same commi
 
 ```text
 local working copy
-  │  git push origin main
+  │  git push github main
   ▼
 GitHub r8vnhill/ravenhill-cl, branch main      authoritative deploy source
   │  push webhook (Cloudflare GitHub App)
@@ -119,9 +119,9 @@ The suite in `tests/` has three files:
 | Variable               | Default                | Purpose                                |
 | ---------------------- | ---------------------- | -------------------------------------- |
 | `RAVENHILL_BASE_URL`   | `https://ravenhill.cl` | Site to probe; use for preview URLs    |
-| `RAVENHILL_SOURCE_REF` | `origin/main`          | Git ref expected to be in production   |
+| `RAVENHILL_SOURCE_REF` | `github/main`          | Git ref expected to be in production   |
 
-The Production suite describes what is **deployed**. Run `git fetch origin` first, and expect the
+The Production suite describes what is **deployed**. Run `git fetch github` first, and expect the
 exposure tests to fail between a local fix and its deploy.
 
 **Extending the suite:**
@@ -135,9 +135,9 @@ Non-public repository files need no test changes; they are derived from the file
 ## Publishing
 
 1. Commit to `main`, and make sure the offline suite passes.
-2. `git push origin main` (GitHub). Workers Builds deploys the new commit.
-3. `git push https://gitlab.com/r8vnhill/ravenhill-cl.git main` (keeps GitLab in sync).
-4. When the build finishes: `git fetch origin; Invoke-Pester ./tests -TagFilter Production`.
+2. `git push github main` (GitHub). Workers Builds deploys the new commit.
+3. `git push origin main` (keeps GitLab in sync).
+4. When the build finishes: `git fetch github; Invoke-Pester ./tests -TagFilter Production`.
 
 ## Credentials boundary
 
@@ -163,7 +163,7 @@ The Cloudflare dashboard (Worker → Deployments) also shows the commit SHA for 
 - **Fastest:** in the Cloudflare dashboard, go to Workers & Pages → `ravenhill-cl` → Deployments,
   pick a previous version, and roll back. `npx wrangler rollback <version-id>` does the same with
   an authenticated wrangler. Production changes immediately; `main` does not.
-- **Durable:** `git revert <bad-sha>` and `git push origin main`. Do it after an instant rollback,
+- **Durable:** `git revert <bad-sha>` and `git push github main`. Do it after an instant rollback,
   so the next push does not reintroduce the problem.
 - **Worker lost:** from the repository root, run `npx wrangler deploy` with an authenticated
   wrangler. Then reattach the `ravenhill.cl` and `www.ravenhill.cl` custom domains, and reconnect
